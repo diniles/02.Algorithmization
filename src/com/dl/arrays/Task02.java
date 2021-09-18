@@ -7,6 +7,7 @@ public class Task02 {
 		int n = 12;
 		int z = 6;
 		int[] array = new int[n];
+		int changed = 0;
 
 		System.out.println("Initial array");
 		for (int i = 0; i < array.length; i++) {
@@ -17,12 +18,14 @@ public class Task02 {
 		for (int i = 0; i < array.length; i++) {
 			if (array[i] > z) {
 				array[i] = z;
+				changed++;
 			}
 		}
 		System.out.println("\nArray after change");
 		for (int i : array) {
 			System.out.print(array[i] + " ");
 		}
+		System.out.printf("\nTotal changes: %d", changed);
 	}
 
 }
