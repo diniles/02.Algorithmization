@@ -13,14 +13,13 @@ public class Task08 {
         fillArray(array, n);
 
         int min = Integer.MAX_VALUE;
-        for (int i = 0; i < array.length; i++) {
-            if (min > array[i]) min = array[i];
+        for (int j : array) {
+            if (min > j) min = j;
         }
 
         System.out.printf("Minimal number is: %d\n", min);
 
         int[] arr = returnArray(array, min);
-        System.out.println(arr);
         System.out.println("Result array is:\n" + Arrays.toString(arr));
     }
 
