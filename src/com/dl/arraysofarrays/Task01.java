@@ -7,7 +7,18 @@ public class Task01 {
 		// TODO Auto-generated method stub
 		int m = 5;
 		int n = 5;
-		Service.generateMatrix(m, n);
+		System.out.println("Initial matrix");
+		int[][] matrix = Service.generateMatrix(m, n);
+		System.out.println("----------");
+
+		for (int i = 1; i < matrix.length; i += 2) {
+			if (matrix[i][0] > matrix[i][matrix[i].length - 1]) {
+				for (int j = 0; j < matrix.length; j++) {
+					System.out.print(matrix[i][j] + " ");
+				}
+			}
+			System.out.println();
+		}
 	}
 
 }
